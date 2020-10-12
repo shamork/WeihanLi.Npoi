@@ -927,7 +927,7 @@ namespace WeihanLi.Npoi
         public static void WriteToFile([NotNull] this IWorkbook workbook, string filePath)
         {
             var dir = Path.GetDirectoryName(filePath);
-            if (null == dir)
+            if (string.IsNullOrEmpty(dir))
             {
                 filePath = ApplicationHelper.MapPath(filePath);
             }
